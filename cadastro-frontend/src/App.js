@@ -49,7 +49,14 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
+    <div
+      style={{
+        maxWidth: "600px",
+        margin: "50px auto",
+        padding: "20px",
+        textAlign: "center",
+      }}
+    >
       <h2>Cadastro de Aluno</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -58,14 +65,16 @@ function App() {
           value={form.nome}
           onChange={handleChange}
           required
-        /><br /><br />
+          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+        />
         <input
           name="telefone"
           placeholder="Telefone"
           value={form.telefone}
           onChange={handleChange}
           required
-        /><br /><br />
+          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+        />
         <input
           name="email"
           type="email"
@@ -73,19 +82,42 @@ function App() {
           value={form.email}
           onChange={handleChange}
           required
-        /><br /><br />
+          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+        />
         <input
           name="endereco"
           placeholder="Endereço"
           value={form.endereco}
           onChange={handleChange}
           required
-        /><br /><br />
-        <button type="submit">Cadastrar</button>
+          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+        />
+        <button
+          type="submit"
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#007BFF",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          Cadastrar
+        </button>
       </form>
 
-      <h3>Alunos Cadastrados</h3>
-      <table border="1" cellPadding="5" style={{ width: "100%" }}>
+      <h3 style={{ marginTop: "40px" }}>Alunos Cadastrados</h3>
+      <table
+        border="1"
+        cellPadding="5"
+        style={{
+          width: "100%",
+          backgroundColor: "#E0F0FF", // azul claro
+          borderCollapse: "collapse",
+          marginTop: "20px",
+        }}
+      >
         <thead>
           <tr>
             <th>Nome</th>
@@ -95,18 +127,19 @@ function App() {
           </tr>
         </thead>
         <tbody>
-        {alunos.map((alunoWrapper) => (
-          <tr key={alunoWrapper.id}>
-          <td>{alunoWrapper.aluno?.nome}</td>
-          <td>{alunoWrapper.aluno?.telefone}</td>
-          <td>{alunoWrapper.aluno?.email}</td>
-          <td>{alunoWrapper.aluno?.endereco}</td>
-          </tr>
-        ))}
+          {alunos.map((alunoWrapper) => (
+            <tr key={alunoWrapper.id}>
+              <td>{alunoWrapper.aluno?.nome}</td>
+              <td>{alunoWrapper.aluno?.telefone}</td>
+              <td>{alunoWrapper.aluno?.email}</td>
+              <td>{alunoWrapper.aluno?.endereco}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
 }
+
 
 export default App;

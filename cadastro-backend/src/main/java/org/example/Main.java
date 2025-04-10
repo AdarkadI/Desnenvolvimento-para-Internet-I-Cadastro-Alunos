@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@OpenAPIDefinition(info = @Info(title = "API Biblioteca", version = "1.0", description = "Documentação da API"))
+@OpenAPIDefinition(info = @Info(title = "API Cadastro", version = "1.0", description = "Documentação da API"))
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
