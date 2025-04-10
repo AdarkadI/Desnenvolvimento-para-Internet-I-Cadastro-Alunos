@@ -1,6 +1,6 @@
 # Cadastro de Alunos - Full Stack com Spring Boot e React
 
-Este projeto é uma aplicação full-stack simples para cadastro de alunos, utilizando:
+Este projeto é composto por dois módulos:
 
 - **cadastro-backend**: Java com Spring Boot + MongoDB
 - **cadastro-frontend**: React (sem bibliotecas externas)
