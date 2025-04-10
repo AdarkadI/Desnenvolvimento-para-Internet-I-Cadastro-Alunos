@@ -28,13 +28,6 @@ public class CadastroController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedAluno);
     }
 
-    @PutMapping(Constant.API_CADASTRO)
-    public ResponseEntity<Cadastro>  update(@RequestBody Cadastro cadastro){
-        Cadastro savedBook = cadastroService.save(cadastro);
-        return ResponseEntity.ok(savedBook);
-
-    }
-
     @GetMapping(Constant.API_FIND_ALL)
     public ResponseEntity<List<Cadastro>> findAll(){
         return ResponseEntity.ok(cadastroService.findAll());
